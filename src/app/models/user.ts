@@ -1,11 +1,13 @@
 export class User {
     //public number: age;
-    public number: preferred_deposit; // предпочтительная сумма вложения
+    public preferred_deposit: number; // предпочтительная сумма вложения
 
-    // factors are from 0 to 1;
-    public number: factor_risky; // рискованность
-    public number: factor_diversification; // желание диверсифицироваться
-    public number: factor_duration; // предпочтение на сроки вложения
-    public number: factor_boomer; // насколько предпочтительны обще-известные бренды
+    // factors are from 0 to 1
+    public factor_risky: number; // рискованность
+    public factor_diversification: number; // желание диверсифицироваться
+    public factor_duration: number; // предпочтение на сроки вложения
+    public factor_boomer: number; // насколько предпочтительны обще-известные бренды
+    public factor_skill: number; // осведомленность в сфере инвестирования
+    public factor_optimism: number; // оптимизм пользователя
     //something else... public number: factor_
 }

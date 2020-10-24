@@ -11,5 +11,4 @@ export class TestLendingComponent implements OnInit {
   imgURL :string = "https://muzei-mira.com/uploads/posts/2020-09/1600694720_peterburg-bogolubov.jpg"
   ngOnInit(): void {
   }
-
 }

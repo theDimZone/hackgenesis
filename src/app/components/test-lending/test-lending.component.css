@@ -26,9 +26,9 @@
   border-bottom: .25rem solid transparent;
 }
 
-
-
-
+.blacklink{
+  color: #000000;
+}
 
 .nav-masthead .active {
   color: #fff;

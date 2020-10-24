@@ -9,12 +9,15 @@ import { AboutPageComponent } from './components/about-page/about-page.component
 import { TestPageComponent } from './components/test-page/test-page.component';
 import { NotfoundPageComponent } from './components/notfound-page/notfound-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TestLendingComponent } from './components/test-lending/test-lending.component';
 
 const routes: Routes =[
     { path: '', component: IndexPageComponent},
     { path: 'about', component: AboutPageComponent},
     { path: 'test', component: TestPageComponent },
+    { path: 'test-lending', component: TestLendingComponent},
     { path: '**', component: NotfoundPageComponent }
+
 ];
 
 @NgModule({
@@ -23,7 +26,8 @@ const routes: Routes =[
     IndexPageComponent,
     AboutPageComponent,
     TestPageComponent,
-    NotfoundPageComponent
+    NotfoundPageComponent,
+    TestLendingComponent
   ],
   imports: [
     BrowserModule,

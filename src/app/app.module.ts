@@ -11,6 +11,8 @@ import { NotfoundPageComponent } from './components/notfound-page/notfound-page.
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TestLendingComponent } from './components/test-lending/test-lending.component';
 import { HelperPageComponent } from './components/helper-page/helper-page.component';
+import { OfferBlockComponent } from './components/offer-block/offer-block.component';
+import { ProductBlockComponent } from './components/product-block/product-block.component';
 
 const routes: Routes =[
     { path: '', component: IndexPageComponent},
@@ -30,7 +32,9 @@ const routes: Routes =[
     TestPageComponent,
     NotfoundPageComponent,
     TestLendingComponent,
-    HelperPageComponent
+    HelperPageComponent,
+    OfferBlockComponent,
+    ProductBlockComponent
   ],
   imports: [
     BrowserModule,

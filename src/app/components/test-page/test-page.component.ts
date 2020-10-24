@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Test, Question, Answer } from "../../models/test";
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { Factors } from "../../models/factors";
 
@@ -21,7 +21,10 @@ export class TestPageComponent implements OnInit {
   public is_finished_prev: boolean = false;
   public is_finished: boolean = false;
 
-  constructor(private titleService: Title, private activateRoute: ActivatedRoute, private localStorageService: LocalStorageService) {
+  constructor(private titleService: Title,
+              private activateRoute: ActivatedRoute,
+              private localStorageService: LocalStorageService,
+              private router: Router) {
     let name = activateRoute.snapshot.params['name'];
     this.test = tests[name] as Test;
     this.titleService.setTitle(this.test.name);
@@ -97,7 +100,7 @@ export class TestPageComponent implements OnInit {
       this.localStorageService.setUserParameter("passed_tests", passed_tests);
     }
 
-    // redirect to helper
+    this.router.navigate(['/helper'])
   }
 
 }

@@ -23,7 +23,7 @@
     "possible_loss": 30,
     "price": 797,
     "required_factors": {
-      "risky": 30
+      "risky": 20
     }
   }
 ]

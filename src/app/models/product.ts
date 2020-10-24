@@ -10,4 +10,5 @@ export class Product {
 
   public required_factors: Factors;
   public offers: Offer[];
+  public offers_count: number[]; // count of offers you need to buy
 }

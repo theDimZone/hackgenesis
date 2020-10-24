@@ -1,0 +1,7 @@
+<p>{{ offer.name }}</p>
+<p *ngIf="offer.type == 'bond'">
+  Облигация
+</p>
+<p *ngIf="offer.type == 'stock'">
+  Акция
+</p>

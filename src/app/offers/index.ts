@@ -1,6 +1,6 @@
-import db_stocks from './stocks.json';
-import db_bonds from './bonds.json';
-import db_products from './products.json';
+import stocks from './stocks.json';
+import bonds from './bonds.json';
+import products from './products.json';
 
-
-export default { db_stocks: db_stocks, db_bonds: db_bonds, db_products: db_products };
+//export db_stocks;
+export default { stocks: stocks, bonds: bonds, products: products };

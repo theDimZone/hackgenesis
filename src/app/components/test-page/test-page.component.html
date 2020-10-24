@@ -1,3 +1,4 @@
+<h2>{{ test.name }}</h2>
 <p><ngb-progressbar [showValue]="true" type="info" [value]="current_step_percent"></ngb-progressbar></p>
 <p>
   {{ current_question.text }}
@@ -8,6 +9,6 @@
     {{ answer.text }}
   </label>
 </div>
-<button type="button" class="btn btn-secondary">Назад</button>
+<button type="button" class="btn btn-secondar">Назад</button>
 <button *ngIf="current_step != test.questions.length - 1" type="button" class="btn btn-primary">Далее</button>
 <button *ngIf="current_step == test.questions.length - 1" type="button" class="btn btn-success">Готово</button>

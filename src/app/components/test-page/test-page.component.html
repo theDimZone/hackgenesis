@@ -1,1 +1,13 @@
-<p>test-page works!</p>
+<p><ngb-progressbar [showValue]="true" type="info" [value]="current_step_percent"></ngb-progressbar></p>
+<p>
+  {{ current_question.text }}
+</p>
+<div class="form-check" *ngFor="let answer of current_question.answers; index as i;">
+  <input class="form-check-input" name="radio" [id]="i"  type="radio" value="answer.impact">
+  <label class="form-check-label" for="exampleRadios1" >
+    {{ answer.text }}
+  </label>
+</div>
+<button type="button" class="btn btn-secondary">Назад</button>
+<button *ngIf="current_step != test.questions.length - 1" type="button" class="btn btn-primary">Далее</button>
+<button *ngIf="current_step == test.questions.length - 1" type="button" class="btn btn-success">Готово</button>

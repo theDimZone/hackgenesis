@@ -2,46 +2,99 @@
   "name": "Тест 1",
   "questions": [
           {
-            "text": "Вопрос 1",
+            "text": "Был ли у вас опыт в инвестициях ? ",
             "value": {},
             "answers": [
               {
-                "text": "Ответ 1 для 1",
-                "impact_factor": "risky",
+                "text": "Да",
+                "impact_factor": "skill",
                 "impact": 50
               },
               {
-                "text": "Ответ 2 для 1",
-                "impact_factor": "risky",
-                "impact": 15
-              },
-              {
-                "text": "Ответ 3 для 1",
-                "impact_factor": "risky",
-                "impact": -20
+                "text": "нет",
+                "impact_factor": "skill",
+                "impact": -50
               }
             ]
           },
           {
-            "text": "Вопрос 2",
+            "text": "Как вы готовы вкладываться ?",
             "value": {},
             "answers": [
               {
-                "text": "Ответ 1 для 2",
-                "impact_factor": "duration",
+                "text": "Единожды",
+                "impact_factor": "frequency",
                 "impact": 100
               },
               {
-                "text": "Ответ 2 для 2",
-                "impact_factor": "duration",
+                "text": "Многократно",
+                "impact_factor": "frequency",
                 "impact": 40
-              },
-              {
-                "text": "Ответ 3 для 2",
-                "impact_factor": "duration",
-                "impact": 0
               }
             ]
+          },
+          {
+            "text": "Какие у вас предпочтения по инвестированию ?",
+            "value": {},
+            "answers": [
+              {
+                "text": "Низкая доходность, минимальный риск",
+                "impact_factor": "risky",
+                "impact": -50
+              },
+              {
+                "text": "Небольшая доходность, низкий риск",
+                "impact_factor": "risky",
+                "impact": 0
+              },
+              {
+                "text": "Средняя доходность, средний риск",
+                "impact_factor": "risky",
+                "impact": 50
+              },
+              {
+                "text": "Высокая доходность, высокий риск",
+                "impact_factor": "risky",
+                "impact": 100
+              }
+            ]
+            },
+              {
+                "text": "Имеете ли вы стабильный доход?",
+                "value": {},
+                "answers": [
+                  {
+                    "text": "да",
+                    "impact_factor": "stability",
+                    "impact": 100
+                  },
+                  {
+                    "text": "нет",
+                    "impact_factor": "stability",
+                    "impact": 0
+                  }
+                ]
+              },
+                {
+                  "text": "Через сколько вы бы хотели получить доход?",
+                  "value": {},
+                  "answers": [
+                    {
+                      "text": "Сразу (до 2 месяцев)",
+                      "impact_factor": "duration",
+                      "impact": 33
+                    },
+                    {
+                      "text": "1-5 лет",
+                      "impact_factor": "duration",
+                      "impact": 70
+                    },
+                    {
+                      "text": "5-10 лет",
+                      "impact_factor": "duration",
+                      "impact": 100
+                    }
+                  ]
+                }
+            ]
           }
-  ]
-}

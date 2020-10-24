@@ -1,6 +1,8 @@
 export class Answer {
   public text: string;
   // adds some impact
+  public string: impact_factor;
+  public number: impact;
 }
 
 export class Question {

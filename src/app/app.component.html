@@ -1,6 +1,27 @@
-<nav>
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/" id="pills-home-tab">Главная</a>
+
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/test" id="pills-home-tab">Тест</a>
+
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink routerLink="/about" id="pills-home-tab">О компании</a>
+
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav"></div>
+<br>
+
+
+
+
+<!--<nav>
   <a routerLink="/">Главная</a>
   <a routerLink="/test">Тест</a>
   <a routerLink="/about">О компании</a>
-</nav>
+</nav>-->
 <router-outlet></router-outlet>

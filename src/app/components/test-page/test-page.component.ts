@@ -3,6 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Test, Question, Answer } from "../../models/test";
 import { ActivatedRoute} from '@angular/router';
 import { LocalStorageService } from '../../services/local-storage.service';
+import { Factors } from "../../models/factors";
 
 import tests from "../../tests/";
 
@@ -24,8 +25,6 @@ export class TestPageComponent implements OnInit {
     let name = activateRoute.snapshot.params['name'];
     this.test = tests[name] as Test;
     this.titleService.setTitle(this.test.name);
-
-    console.log("User: ", this.localStorageService.getUser());
 
     let passed_tests = this.localStorageService.getUserParameter("passed_tests");
     if(passed_tests.includes(name)) this.is_finished_prev = true;
@@ -63,11 +62,11 @@ export class TestPageComponent implements OnInit {
 
   finish(): void {
     this.is_finished = true;
-    let factors = { risky: 0, diversification: 0, duration: 0, boomer: 0, skill: 0, number: 0, optimism: 0 };
+    //let factors = { risky: 0, diversification: 0, duration: 0, boomer: 0, skill: 0, number: 0, optimism: 0 };
 
-    let maximums = { risky: 0, diversification: 0, duration: 0, boomer: 0, skill: 0, number: 0, optimism: 0 };
-    let values = { risky: 0, diversification: 0, duration: 0, boomer: 0, skill: 0, number: 0, optimism: 0 };
-    let relative_values = { risky: 0, diversification: 0, duration: 0, boomer: 0, skill: 0, number: 0, optimism: 0 };
+    let maximums = new Factors();
+    let values = new Factors();
+    let relative_values = new Factors();
     //console.log(this.localStorageService.getUser());
 
     for(let question of this.test.questions) {
@@ -84,13 +83,13 @@ export class TestPageComponent implements OnInit {
       values[question.value.impact_factor] += question.value.impact;
     }
 
-    console.log("Max: ", maximums);
-    console.log("Val: ", values);
-
     for(let factor in values) {
-      let relative_value = values[factor] < 0 ? 0 : values[factor] / maximums[factor] * 100;
-      this.localStorageService.setUserParameter("factor_" + factor, relative_value);
+      console.log(values[factor] / maximums[factor] * 100);
+      relative_values[factor] = values[factor] < 0 ? 0 : values[factor] / maximums[factor] * 100;
+      //this.localStorageService.setUserParameter("factor_" + factor, relative_value);
     }
+    this.localStorageService.setUserParameter("factors", relative_values);
+
 
     if(!this.is_finished_prev) {
       let passed_tests = this.localStorageService.getUserParameter("passed_tests");

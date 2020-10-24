@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Акции СберБанк",
+    "market_name": "AYE",
+    "description": "Гос. банк бла бла бла",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 15,
+    "possible_loss": 75,
+    "price": 537,
+    "required_factors": {
+      "risky": 80,
+      "boomer": 80
+    }
+  },
+  {
+    "name": "Акции БКС",
+    "market_name": "BCS",
+    "description": "Мир инвестиций",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 30,
+    "possible_loss": 30,
+    "price": 797,
+    "required_factors": {
+      "risky": 30
+    }
+  }
+]

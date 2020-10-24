@@ -1,1 +1,93 @@
-<p>index-page works!</p>
+
+<div *ngIf="toggle1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="height: 30rem;">
+          <!--<img src="..." class="card-img-top" alt="...">-->
+        <div class="card-body">
+          <h5 class="card-title">Акции</h5>
+          <p class="card-text">ПЛЮСЫ МИНУСЫ...</p>
+          <a href="#" class="btn btn-primary" (click)="showStock()">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="height: 30rem;">
+      <!--<img src="..." class="card-img-top" alt="...">-->
+        <div class="card-body">
+          <h5 class="card-title">Облигации</h5>
+          <p class="card-text">ПЛЮСЫ МИНУСЫ...</p>
+          <a href="#" class="btn btn-primary" (click)="showBonds()" >Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div class="card" style="height: 30rem;">
+      <!--<img src="..." class="card-img-top" alt="...">-->
+        <div class="card-body">
+          <h5 class="card-title">Структурные продукты</h5>
+          <p class="card-text">ПЛЮСЫ МИНУСЫ...</p>
+          <a href="#" class="btn btn-primary" (click)="showProducts()">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <a href="#" class="btn btn-primary" routerLink="/test">Все еще ничего не понятно ?  пройдите тест</a>
+
+  </div>
+</div>
+<br>
+
+<div *ngIf="toggleStock">
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card" >
+        <!--<img src="..." class="card-img-top" alt="...">-->
+        <div class="card-body" style=" height: 30rem;">
+          <h5 class="card-title">Акции</h5>
+          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+          <a href="#" class="btn btn-primary" (click)="showStock()">Закрыть</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div *ngIf="toggleBonds">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm">
+      <div class="card" >
+      <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body" style=" height: 30rem;">
+          <h5 class="card-title">Облигации</h5>
+          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+<a href="#" class="btn btn-primary" (click)="showBonds()">Закрыть</a>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div *ngIf="toggleProducts">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm">
+      <div class="card" >
+      <!--<img src="..." class="card-img-top" alt="...">-->
+          <div class="card-body" style=" height: 30rem;">
+          <h5 class="card-title">Структурные продукты</h5>
+          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+<a href="#" class="btn btn-primary" (click)="showProducts()">Закрыть</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

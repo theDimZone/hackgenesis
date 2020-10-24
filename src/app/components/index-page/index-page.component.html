@@ -1,29 +1,32 @@
 
 <div *ngIf="toggle1">
-  <div class="container">
+  <div class="container" style="background-color: #62768E;">
     <div class="row">
       <div class="col-sm">
         <div class="card" style="height: 30rem;">
           <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body">
-          <h3 class="card-title">Акции</h3>
+          <h3 class="card-title" id="HeadText">Акции</h3>
             <div class="container">
-              <div class="row">
-                <div class="col"  style="background-color: #96f08d;">
-                  <h5 class="card-text" >ПЛЮСЫ </h5>
-                    <p class="card-text">Покупка акций и их продажа приносит большую прибыль</p>
-                    <p class="card-text">Акции можно продать практически мгновенно</p>
+              <div class="row" >
+                <div class="col"  style="background-color: #00ff1a24;">
+
+                    <p class="card-text" style="color: #5E5D60;">Покупка акций и их продажа приносит большую прибыль</p>
+
+                    <p class="card-text" style="color: #5E5D60;">Акции можно продать практически мгновенно</p>
                   </div>
                     </div>
+                    <br>
                   <div class="row">
-                  <div class="col" style="background-color: #ff5e5e;">
-                    <h5 class="card-text">МИНУСЫ</h5>
-                      <p class="card-text">Акционер получает прибыль последним и находится не в равных правах с генеральным директором.</p>
-                      <p class="card-text">Для успешного вложения капитала в акции нужны опыт и знания.</p>
+                  <div class="col" style="background-color: #ff000013;">
+
+                      <p class="card-text"  id="InfoText">Акционер получает прибыль последним и находится не в равных правах с генеральным директором.</p>
+
+                      <p class="card-text"  id="InfoText">Для успешного вложения капитала в акции нужны опыт и знания.</p>
                     </div>
                 </div>
               </div>
-          <a href="#" class="btn btn-primary" (click)="showStock()">Подробнее</a>
+          <a href="#" class="card-link" (click)="showStock()" id="More">Подробнее</a>
         </div>
       </div>
     </div>
@@ -34,21 +37,21 @@
           <h3 class="card-title">Облигации</h3>
           <div class="container">
             <div class="row">
-              <div class="col"  style="background-color: #96f08d;">
-                <h5 class="card-text" >ПЛЮСЫ </h5>
-                  <p class="card-text">вклады подходят консервативным инвесторам, сторонникам низких рисков</p>
-                  <p class="card-text">Стабильные выплаты</p>
+                <div class="col"  style="background-color:  #00ff1a24;">
+
+                  <p class="card-text"  id="InfoText">вклады подходят консервативным инвесторам, сторонникам низких рисков</p>
+                  <p class="card-text"  id="InfoText">проценты выше, чем по депозитам</p>
                 </div>
                   </div>
+                    <br>
                 <div class="row">
-                <div class="col" style="background-color: #ff5e5e;">
-                  <h5 class="card-text">МИНУСЫ</h5>
-                  <p class="card-text">невысокая доходность</p>
-              
+                  <div class="col" style="background-color:   #ff000013;">
+
+
                   </div>
               </div>
             </div>
-          <a href="#" class="btn btn-primary" (click)="showBonds()" >Подробнее</a>
+          <a id="More" href="#" class="card-link" (click)="showBonds()" >Подробнее</a>
         </div>
       </div>
     </div>
@@ -59,25 +62,26 @@
           <h3 class="card-title">Структурные продукты</h3>
           <div class="container">
             <div class="row">
-              <div class="col"  style="background-color: #96f08d;">
-                <h5 class="card-text" >ПЛЮСЫ </h5>
-                  <p class="card-text">Покупка акций и их продажа приносит</p>
+  <div class="col"  style="background-color:  #00ff1a24;">
+
+                  <p class="card-text"  id="InfoText">Покупка акций и их продажа приносит</p>
                 </div>
                   </div>
+                    <br>
                 <div class="row">
-                <div class="col" style="background-color: #ff5e5e;">
-                  <h5 class="card-text">МИНУСЫ</h5>
+                  <div class="col" style="background-color:  #ff000013;">
+
                   </div>
               </div>
             </div>
-          <a href="#" class="btn btn-primary" (click)="showProducts()">Подробнее</a>
+          <a href="#" class="card-link" (click)="showProducts()" id="More">Подробнее</a>
         </div>
       </div>
     </div>
   </div>
   <br>
 
-  <a href="#" class="btn btn-lg btn-secondary newlink" routerLink="/test">Все еще ничего не понятно ?  пройдите тест</a>
+  <a href="#" class="btn btn-primary" routerLink="/test" style="background-color:  #808084; border-color:#FFFFFF ">Все еще ничего не понятно ?  пройдите тест</a>
 
   </div>
 </div>
@@ -91,11 +95,11 @@
         <!--<img src="..." class="card-img-top" alt="...">-->
         <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Акции</h5>
-          <p class="card-text">Акции – это ценные бумаги, которые обеспечивают ее владельцу долю в капитале компании.</p>
+          <p class="card-text" id="InfoText">Акции – это ценные бумаги, которые обеспечивают ее владельцу долю в капитале компании.</p>
             <br>
-              <p class="card-text">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
-          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
-          <a href="#" class="btn btn-lg btn-secondary newlink" (click)="showStock()">Закрыть</a>
+              <p class="card-text" id="InfoText">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
+          <p class="card-text"id="InfoText">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+          <a href="#" id="More" class="card-link" (click)="showStock()">Закрыть</a>
         </div>
       </div>
     </div>
@@ -111,8 +115,8 @@
       <!--<img src="..." class="card-img-top" alt="...">-->
           <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Облигации</h5>
-          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
-<a href="#" class="btn btn-lg btn-secondary newlink" (click)="showBonds()">Закрыть</a>
+          <p class="card-text"id="InfoText">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+<a href="#" id="More" class="card-link" (click)="showBonds()">Закрыть</a>
         </div>
       </div>
     </div>
@@ -128,8 +132,8 @@
       <!--<img src="..." class="card-img-top" alt="...">-->
           <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Структурные продукты</h5>
-          <p class="card-text">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
-<a href="#" class="btn btn-lg btn-secondary newlink" (click)="showProducts()">Закрыть</a>
+          <p class="card-text"id="InfoText">ПОДРОБНАЯ ИНФОРМАЦИЯ</p>
+<a href="#" id="More" class="card-link" (click)="showProducts()">Закрыть</a>
         </div>
       </div>
     </div>

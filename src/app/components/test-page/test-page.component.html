@@ -1,12 +1,13 @@
-  <h2>{{ test.name }}</h2>
-  <p><ngb-progressbar [showValue]="true" type="info" [value]="current_step_percent"></ngb-progressbar></p>
+<div class="container rounded mb-4 pb-3" style="background-color: #FFFFFF;" >
+  <h2 id="HeadText">{{ test.name }}</h2>
+  <p><ngb-progressbar [showValue]="true" type="secondary" [value]="current_step_percent" ></ngb-progressbar></p>
   <div *ngIf="!is_finished">
-    <p>
+    <p id="InfoText">
       {{ current_question.text }}
     </p>
     <div class="form-check" *ngFor="let answer of current_question.answers; index as i;">
       <input class="form-check-input" name="radio" [id]="i"  type="radio" (change)="choose(i)" [checked]="current_question.value == answer" >
-      <label class="form-check-label" for="exampleRadios1" >
+      <label class="form-check-label" for="exampleRadios1" id="InfoText" >
         {{ answer.text }}
       </label>
     </div>
@@ -16,4 +17,5 @@
   </div>
   <div *ngIf="is_finished">
       Загрузка...
+  </div>
   </div>

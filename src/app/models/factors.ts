@@ -6,4 +6,6 @@ export class Factors {
   public boomer: number = 0; // насколько предпочтительны обще-известные бренды
   public skill: number = 0; // осведомленность в сфере инвестирования
   public optimism: number = 0; // оптимизм пользователя
+  public frequency: number = 0; // частота инвестиций
+  public stability: number = 0;// стабильность основного дохода
 }

@@ -15,7 +15,8 @@ export class TestPageComponent implements OnInit {
   public current_question: Question;
   public current_step: number = 0;
   public current_step_percent: number = 0;
-  
+
+  public is_finished: boolean = false;
 
   constructor(private titleService: Title, private activateRoute: ActivatedRoute) {
     let name = activateRoute.snapshot.params['name'];
@@ -29,14 +30,36 @@ export class TestPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next_question(): void {
+  choose(i: number): void {
+    this.current_question.value = this.current_question.answers[i];
+  }
 
+  prev_question(): void {
 
-    this.current_step++;
-    //if(this.current_step == this.test.questions.length) //... finish
+    this.current_step--;
 
     this.current_question = this.test.questions[this.current_step];
     this.current_step_percent = this.current_step / this.test.questions.length * 100;
   }
 
+  next_question(): void {
+    if(!this.current_question.value.text) return;
+
+    this.current_step++;
+    this.current_step_percent = this.current_step / this.test.questions.length * 100;
+    if(this.current_step == this.test.questions.length) {
+      this.finish();
+      return;
+    }
+
+    this.current_question = this.test.questions[this.current_step];
+  }
+
+  finish(): void {
+    this.is_finished = true;
+
+    for(let question of this.test.questions) {
+      console.log(question.value);
+    }
+  }
 }

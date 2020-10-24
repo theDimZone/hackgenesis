@@ -1,18 +1,20 @@
 export class Answer {
   public text: string;
   // adds some impact
-  public string: impact_factor;
-  public number: impact;
+  public impact_factor: string;
+  public impact: number; //from 0 to infinity, relatievity calculates after test
+
+  
 }
 
 export class Question {
   public text: string;
-  public answers: Answer[];
+  public answers: Answer[] = [];
 }
 
 export class Test {
     public name: string;
-    public questions: Question[];
+    public questions: Question[] = [];
 
   /*
     constructor(public title: string,

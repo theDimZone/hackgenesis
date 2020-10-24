@@ -1,0 +1,45 @@
+{
+  "name": "Тест 1",
+  "questions": [
+          {
+            "text": "Вопрос 1",
+            "answers": [
+              {
+                "text": "Ответ 1 для 1",
+                "impact_factor": "risky",
+                "impact": 50
+              },
+              {
+                "text": "Ответ 2 для 1",
+                "impact_factor": "risky",
+                "impact": 15
+              },
+              {
+                "text": "Ответ 3 для 1",
+                "impact_factor": "risky",
+                "impact": -20
+              }
+            ]
+          },
+          {
+            "text": "Вопрос 2",
+            "answers": [
+              {
+                "text": "Ответ 1 для 2",
+                "impact_factor": "duration",
+                "impact": 100
+              },
+              {
+                "text": "Ответ 2 для 2",
+                "impact_factor": "duration",
+                "impact": 40
+              },
+              {
+                "text": "Ответ 3 для 2",
+                "impact_factor": "duration",
+                "impact": 0
+              }
+            ]
+          }
+  ]
+}

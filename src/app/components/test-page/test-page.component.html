@@ -5,7 +5,7 @@
       {{ current_question.text }}
     </p>
     <div class="form-check" *ngFor="let answer of current_question.answers; index as i;">
-      <input class="form-check-input" name="radio" [id]="i"  type="radio" (change)="choose(i)" [checked]="current_question.value == answer" [(ngModel)]="current_question.value" [value]="answer">
+      <input class="form-check-input" name="radio" [id]="i"  type="radio" (change)="choose(i)" [checked]="current_question.value == answer" >
       <label class="form-check-label" for="exampleRadios1" >
         {{ answer.text }}
       </label>
@@ -15,5 +15,5 @@
     <button *ngIf="current_step == test.questions.length - 1" type="button" (click)="next_question()" class="btn btn-success">Готово</button>
   </div>
   <div *ngIf="is_finished">
-      ВЫ ПРОШЛИ
+      Загрузка...
   </div>

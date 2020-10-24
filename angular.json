@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hackgenesis"
+    }
+  },
+  "defaultProject": "hackgenesis",
+  "cli": {
+    "analytics": "1e354c04-57cf-48c4-bf4e-37c8b19b3b64"
+  }
 }

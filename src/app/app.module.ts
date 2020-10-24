@@ -14,7 +14,7 @@ import { TestLendingComponent } from './components/test-lending/test-lending.com
 const routes: Routes =[
     { path: '', component: IndexPageComponent},
     { path: 'about', component: AboutPageComponent},
-    { path: 'test', component: TestPageComponent },
+    { path: 'test/:name', component: TestPageComponent },
     { path: 'test-lending', component: TestLendingComponent},
     { path: '**', component: NotfoundPageComponent }
 

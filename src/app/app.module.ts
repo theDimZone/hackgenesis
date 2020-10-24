@@ -1,7 +1,7 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page/index-page.component';
@@ -21,7 +21,8 @@ const routes: Routes =[
     AppComponent,
     IndexPageComponent,
     AboutPageComponent,
-    TestPageComponent
+    TestPageComponent,
+    NotfoundPageComponent
   ],
   imports: [
     BrowserModule,

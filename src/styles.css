@@ -4,3 +4,22 @@
 html {
   font-family: 'Roboto', sans-serif;
 }
+.newlink,
+.newlink:focus,
+.newlink:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+.btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}

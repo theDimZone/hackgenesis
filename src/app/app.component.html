@@ -1,33 +1,35 @@
-<ul ngbNav #nav="ngbNav" class="nav justify-content-center" style="background-color:#FFFFFF;height:4rem;" >
-  <li ngbNavItem >
-    <a ngbNavLink routerLink="/" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">Главная</a>
+<div class="parallax" style="background = #a1d6b0;">
 
-  </li>
-  <!--<li ngbNavItem>
-    <a ngbNavLink routerLink="/test" id="pills-home-tab">Тест</a>
+  <ul ngbNav #nav="ngbNav" class="nav justify-content-center" style="background-color:#ffffff;height:4rem; opacity: .7;" >
+    <li ngbNavItem >
+      <a ngbNavLink routerLink="/" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">Главная</a>
 
-  </li>-->
-  <li ngbNavItem>
-    <a ngbNavLink routerLink="/about" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">О компании</a>
-  </li>
+    </li>
+    <!--<li ngbNavItem>
+      <a ngbNavLink routerLink="/test" id="pills-home-tab">Тест</a>
 
-  <li ngbNavItem>
-    <a ngbNavLink routerLink="/about" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">Помошник</a>
-  </li>
-</ul>
+    </li>-->
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/about" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">О компании</a>
+    </li>
 
-<div [ngbNavOutlet]="nav"></div>
-  <div class="container-fluid" style="background-color: #62768E;">
+    <li ngbNavItem>
+      <a ngbNavLink routerLink="/about" id="pills-home-tab" style="color: #5E5D60; font-size: 200%;">Помошник</a>
+    </li>
+  </ul>
 
-<br>
-<!--<a routerLink="/test-lending"> новый тест</a>-->
+  <div [ngbNavOutlet]="nav"></div>
+    <div class="container-fluid">
+
+  <!--<a routerLink="/test-lending"> новый тест</a>-->
 
 
 
-<!--<nav>
-  <a routerLink="/">Главная</a>
-  <a routerLink="/test">Тест</a>
-  <a routerLink="/about">О компании</a>
-</nav>-->
-<router-outlet ></router-outlet>
+  <!--<nav>
+    <a routerLink="/">Главная</a>
+    <a routerLink="/test">Тест</a>
+    <a routerLink="/about">О компании</a>
+  </nav>-->
+  <router-outlet ></router-outlet>
+  </div>
 </div>

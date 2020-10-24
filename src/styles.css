@@ -1,17 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 html {
   font-family: 'Roboto', sans-serif;
-  background-color: #62768E;
+
+}
+div {
+  opacity: .97;
 }
 .newlink,
 .newlink:focus,
 .newlink:hover {
   color: #fff;
 }
-container{
-  background-color: #62768E;
+body{
+
 }
 
 /* Custom default button */

@@ -1,6 +1,6 @@
 [
   {
-    "name": "Группа ЛСР-БО-001P-02",
+    "name": "Облигации Группа ЛСР-БО-001P-02",
     "market_name": "Группа ЛСР",
     "description": "Российская компания, работающая в сфере производства стройматериалов",
     "type": "bond",
@@ -11,11 +11,11 @@
     "required_factors": {
       "risky": 20,
       "boomer": 60,
-      "duration": 20
+      "duration": 80
     }
   },
   {
-    "name": "Облигация Кредит Европа-001Р-03",
+    "name": "Облигации Кредит Европа-001Р-03",
     "market_name": "Кредит Европа",
     "description": "Банк",
     "type": "bond",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "name": "Облигация РОСНАНО-8",
+    "name": "Облигации РОСНАНО-8",
     "market_name": "РОСНАНО-8",
     "description": "Российская технологическая компания",
     "type": "bond",
@@ -40,6 +40,49 @@
     "price": 1044,
     "required_factors": {
       "risky": 40,
+      "boomer": 80
+    }
+  },
+  {
+    "name": "Облигации Тинькофф Банк-001P-03R",
+    "market_name": "Banki.ru",
+    "description": "Российский коммерческий банк",
+    "type": "bond",
+    "logo": "https://acdn.tinkoff.ru/static/documents/30dd69e2-8364-4984-9cd4-92d5d9c85aba.png",
+    "possible_profit": 7,
+    "possible_loss": 4,
+    "price": 1030,
+    "required_factors": {
+      "risky": 0,
+      "boomer": 0
+    }
+  }
+  ,
+  {
+    "name": "Облигации РЖД-001P-14R",
+    "market_name": "Banki.ru",
+    "description": "Российская государственная вертикально интегрированная компания",
+    "type": "bond",
+    "logo": "https://pbs.twimg.com/profile_images/979463312546189313/75wxa5KE_400x400.jpg",
+    "possible_profit": 5,
+    "possible_loss": 2,
+    "price": 1184,
+    "required_factors": {
+      "risky": 0,
+      "boomer": 80
+    }
+  },
+  {
+    "name": "Облигации Камаз-БО-П05",
+    "market_name": "Banki.ru",
+    "description": "Российская компания, производитель дизельных грузовых автомобилей и дизелей",
+    "type": "bond",
+    "logo": "https://upload.wikimedia.org/wikipedia/ru/thumb/5/55/Logo_kamaz.jpg/200px-Logo_kamaz.jpg",
+    "possible_profit": 8,
+    "possible_loss": 5,
+    "price": 1022,
+    "required_factors": {
+      "risky": 0,
       "boomer": 80
     }
   }

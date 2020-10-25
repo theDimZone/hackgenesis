@@ -54,6 +54,48 @@
       "risky": 15,
       "stability": 40
     }
+  },
+  {
+    "name": "Акции Газпром",
+    "market_name": "Banki.ru",
+    "description": "Российская транснациональная энергетическая компания",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 6,
+    "possible_loss": 2,
+    "price": 200,
+    "required_factors": {
+      "risky": 0,
+      "stability": 0
+    }
+  },
+  {
+    "name": "Акции ЛУКОЙЛ НК",
+    "market_name": "Banki.ru",
+    "description": "Российская транснациональная энергетическая компания",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 7,
+    "possible_loss": 4,
+    "price": 4324,
+    "required_factors": {
+      "risky": 10,
+      "stability": 5
+    }
+  },
+  {
+    "name": "Акции МТС",
+    "market_name": "Banki.ru",
+    "description": "Российская телекоммуникационная компания",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 22,
+    "possible_loss": 4,
+    "price": 320,
+    "required_factors": {
+      "risky": 0,
+      "stability":0
+    }
   }
 
 ]

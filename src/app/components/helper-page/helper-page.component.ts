@@ -36,6 +36,20 @@ export class HelperPageComponent implements OnInit {
   changeDeposit(event: any): void {
     this.user.preferred_deposit = event.target.value;
     this.localStorageService.setUserParameter("preferred_deposit", this.user.preferred_deposit);
+    this.filter();
+  }
+
+  filter(): void {
+    let stocks = db.stocks as Offer[];
+    this.best_stocks = this.findBestOffers(stocks);
+
+    let bonds = db.bonds as Offer[];
+    this.best_bonds = this.findBestOffers(bonds);
+
+    let products = db.products as Product[];
+    this.best_products = this.findBestProducts(products);
+
+    console.log(this.best_products);
   }
 
   findBestOffers(offers: Offer[]): Offer[] {
@@ -43,7 +57,7 @@ export class HelperPageComponent implements OnInit {
 
     for(let offer of offers) {
         for(let offer_factor in offer.required_factors) {
-          if(offer.required_factors[offer_factor] < this.user.factors[offer_factor]) {
+          if(offer.required_factors[offer_factor] <= this.user.factors[offer_factor] && offer.price <= this.user.preferred_deposit) {
             best_offers.push(offer);
             break;
           } else {
@@ -61,7 +75,7 @@ export class HelperPageComponent implements OnInit {
 
     for(let product of products) {
         for(let product_factor in product.required_factors) {
-          if(product.required_factors[product_factor] < this.user.factors[product_factor]) {
+          if(product.required_factors[product_factor] <= this.user.factors[product_factor] && product.price <= this.user.preferred_deposit) {
             best_products.push(product);
             break;
           } else {
@@ -75,18 +89,7 @@ export class HelperPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let stocks = db.stocks as Offer[];
-    this.best_stocks = this.findBestOffers(stocks);
-
-    let bonds = db.bonds as Offer[];
-    this.best_bonds = this.findBestOffers(bonds);
-
-    let products = db.products as Product[];
-    this.best_products = this.findBestProducts(products);
-
-
-
-    console.log(this.best_products);
+    this.filter();
 
   }
 

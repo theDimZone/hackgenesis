@@ -15,7 +15,8 @@ import { OfferBlockComponent } from './components/offer-block/offer-block.compon
 import { ProductBlockComponent } from './components/product-block/product-block.component';
 
 const routes: Routes =[
-    { path: '', component: IndexPageComponent},
+    { path: 'main', component: IndexPageComponent},
+    { path: '', component: TestLendingComponent},
     { path: 'about', component: AboutPageComponent},
     { path: 'helper', component: HelperPageComponent},
     { path: 'test/:name', component: TestPageComponent },

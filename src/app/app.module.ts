@@ -14,6 +14,7 @@ import { TestLendingComponent } from './components/test-lending/test-lending.com
 import { HelperPageComponent } from './components/helper-page/helper-page.component';
 import { OfferBlockComponent } from './components/offer-block/offer-block.component';
 import { ProductBlockComponent } from './components/product-block/product-block.component';
+import { MarketPageComponent } from './components/market-page/market-page.component';
 
 const routes: Routes =[
     { path: 'main', component: IndexPageComponent},
@@ -21,6 +22,7 @@ const routes: Routes =[
     { path: 'about', component: AboutPageComponent},
     { path: 'helper', component: HelperPageComponent},
     { path: 'test/:name', component: TestPageComponent },
+    { path: 'market/:name', component: MarketPageComponent },
     { path: 'about-helper', component: TestLendingComponent},
     { path: '**', component: NotfoundPageComponent }
 
@@ -36,7 +38,8 @@ const routes: Routes =[
     TestLendingComponent,
     HelperPageComponent,
     OfferBlockComponent,
-    ProductBlockComponent
+    ProductBlockComponent,
+    MarketPageComponent
   ],
   imports: [
     FormsModule,

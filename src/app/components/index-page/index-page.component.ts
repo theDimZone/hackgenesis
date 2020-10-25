@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Offer } from '../../models/offer';
+import { Product } from '../../models/product';
+import db from "../../offers/";
 
 @Component({
   selector: 'app-index-page',
@@ -8,15 +11,33 @@ import { Title } from '@angular/platform-browser';
 
 })
 export class IndexPageComponent implements OnInit {
-  toggle1 = true;
-  toggleStock = false;
-  toggleBonds = false;
-  toggleProducts = false;
+  public toggle1: boolean = true;
+  public toggleStock: boolean = false;
+  public toggleBonds: boolean = false;
+  public toggleProducts: boolean = false;
+
+  public stocks: Offer[];
+  public bonds: Offer[];
+  public products: Product[];
+
   constructor(private titleService: Title ) {
     this.titleService.setTitle("Главная");
   }
 
+  init_data(): void {
+    let stocks = db.stocks as Offer[];
+    this.stocks = stocks;
+
+    let bonds = db.bonds as Offer[];
+    this.bonds = bonds;
+
+    let products = db.products as Product[];
+    this.products = products;
+
+  }
+
   ngOnInit(): void {
+    this.init_data();
   }
 
   showStock(){

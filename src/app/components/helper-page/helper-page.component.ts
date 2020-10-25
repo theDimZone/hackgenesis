@@ -40,8 +40,9 @@ export class HelperPageComponent implements OnInit {
         for(let offer_factor in offer.required_factors) {
           if(offer.required_factors[offer_factor] < this.user.factors[offer_factor]) {
             best_offers.push(offer);
+            break;
           } else {
-            continue;
+            break;
           }
         }
     }

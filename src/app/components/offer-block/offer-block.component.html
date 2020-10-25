@@ -25,9 +25,13 @@
     <p class="card-text">{{ offer.description }}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Возможный профит: {{ possible_profit }} рублей</li>
-    <li class="list-group-item">Возможная потеря: {{ possible_loss }} рублей</li>
+    <li class="list-group-item" *ngIf="deposit > 0">Возможный профит: {{ possible_profit }} рублей</li>
+    <li class="list-group-item" *ngIf="deposit > 0">Возможная потеря: {{ possible_loss }} рублей</li>
 
+    <li class="list-group-item" *ngIf="deposit == 0">Возможный профит: {{ offer.possible_profit }}%</li>
+    <li class="list-group-item" *ngIf="deposit == 0">Возможная потеря: {{ offer.possible_loss }}%</li>
+
+    <li class="list-group-item">Цена одной позиции: {{ offer.price }} рублей</li>
   </ul>
   <div class="card-body">
     <a href="#" (click)="$event.stopPropagation();$event.preventDefault();open(content)" class="card-link">История</a>

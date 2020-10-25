@@ -1,7 +1,8 @@
 [
+
   {
     "name": "Акции СберБанк",
-    "market_name": "AYE",
+    "market_name": "Sberbank",
     "description": "Гос. банк бла бла бла",
     "type": "stock",
     "logo": "http...",
@@ -25,5 +26,34 @@
     "required_factors": {
       "risky": 20
     }
+  },
+  {
+    "name": "Акции AlfaBank",
+    "market_name": "AlfaBank",
+    "description": "Частный Банк",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 35,
+    "possible_loss": 65,
+    "price": 654,
+    "required_factors": {
+      "risky": 64,
+      "boomer": 40
+    }
+  },
+  {
+    "name": "Акции Apple",
+    "market_name": "Apple",
+    "description": "It Компания",
+    "type": "stock",
+    "logo": "http...",
+    "possible_profit": 75,
+    "possible_loss": 43,
+    "price": 1100,
+    "required_factors": {
+      "risky": 15,
+      "stability": 40
+    }
   }
+
 ]

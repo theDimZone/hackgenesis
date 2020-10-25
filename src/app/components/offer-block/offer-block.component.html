@@ -1,7 +1,13 @@
-<p>{{ offer.name }}</p>
-<p *ngIf="offer.type == 'bond'">
-  Облигация
+<br>
+<div class="container container rounded mb-4 pb-3" style="background-color: #FFFFFF;" >
+
+
+
+<p id="InfoText" >{{ offer.name }}</p>
+<p *ngIf="offer.type == 'bond'" id="InfoText">
+
 </p>
-<p *ngIf="offer.type == 'stock'">
-  Акция
+<p *ngIf="offer.type == 'stock'" id="InfoText">
+
 </p>
+</div>

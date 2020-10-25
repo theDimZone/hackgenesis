@@ -11,8 +11,8 @@
         {{ answer.text }}
       </label>
     </div>
-    <button type="button" (click)="prev_question()" class="btn btn-secondary">Назад</button>
-    <button *ngIf="current_step != test.questions.length - 1" type="button" (click)="next_question()" class="btn btn-primary">Далее</button>
+    <button type="button" (click)="prev_question()" class="btn btn-light">Назад</button>
+    <button *ngIf="current_step != test.questions.length - 1" type="button" (click)="next_question()" class="btn btn-light">Далее</button>
     <button *ngIf="current_step == test.questions.length - 1" type="button" (click)="next_question()" class="btn btn-success">Готово</button>
   </div>
     <div *ngIf="is_finished">

@@ -18,4 +18,6 @@ export class User {
     //something else... public number: factor_
 
     public passed_tests: string[] = []; // json названия тестов, которые прошел
+
+    public is_helper_skiped: boolean = false;
 }

@@ -4,13 +4,15 @@ import { User } from '../../models/user';
 import { Title } from '@angular/platform-browser';
 import { Offer } from '../../models/offer';
 import { Product } from '../../models/product';
+import { Router } from '@angular/router';
 
 import db from "../../offers/";
 
 @Component({
   selector: 'app-helper-page',
   templateUrl: './helper-page.component.html',
-  styleUrls: ['./helper-page.component.css']
+  styleUrls: ['./helper-page.component.css'],
+  providers: [LocalStorageService]
 })
 export class HelperPageComponent implements OnInit {
   public user: User;
@@ -18,10 +20,16 @@ export class HelperPageComponent implements OnInit {
   public best_bonds: Offer[] = []; // three
   public best_products: Product[] = []; // three
 
-  constructor(private titleService: Title, private localStorageService: LocalStorageService) {
+  constructor(private titleService: Title,
+              private localStorageService: LocalStorageService,
+              private router: Router) {
     this.titleService.setTitle("Помощник");
 
     this.user = this.localStorageService.getUser();
+    if(this.user.passed_tests.length == 0) {
+      this.router.navigate(['/about-helper']);
+    }
+
     console.log(this.user);
   }
 

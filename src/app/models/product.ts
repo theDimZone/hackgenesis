@@ -11,6 +11,7 @@ export class Product {
   // ?? public price: number; // roubles for 1 piece
 
   public required_factors: Factors;
-  public offers: Offer[];
+  //public offers: Offer[];
+  public offers: string[];
   public offers_count: number[]; // count of offers you need to buy
 }

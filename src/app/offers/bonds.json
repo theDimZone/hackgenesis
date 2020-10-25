@@ -1,3 +1,46 @@
 [
-  
+  {
+    "name": "Группа ЛСР-БО-001P-02",
+    "market_name": "Группа ЛСР",
+    "description": "Российская компания, работающая в сфере производства стройматериалов",
+    "type": "bond",
+    "logo": "https://www.google.com/url?sa=i&url=http%3A%2F%2Fpro-strojki.ru%2Fcompany%2Flsr-nedvizhimost-moskva&psig=AOvVaw38_pN6sqeZKKs3fZvNfU2Q&ust=1603700772976000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDbq4ipz-wCFQAAAAAdAAAAABAX",
+    "possible_profit": 16,
+    "possible_loss": 35,
+    "price": 616,
+    "required_factors": {
+      "risky": 20,
+      "boomer": 60,
+      "duration": 20
+    }
+  },
+  {
+    "name": "Облигация Кредит Европа-001Р-03",
+    "market_name": "Кредит Европа",
+    "description": "Банк",
+    "type": "bond",
+    "logo": "https://smart-lab.ru/uploads/articles/00/39/90/thumbnail.png",
+    "possible_profit": 9,
+    "possible_loss": 2,
+    "price": 1017,
+    "required_factors": {
+      "risky": 10,
+      "stability":70,
+      "duration":80
+    }
+  },
+  {
+    "name": "Облигация РОСНАНО-8",
+    "market_name": "РОСНАНО-8",
+    "description": "Российская технологическая компания",
+    "type": "bond",
+    "logo": "https://cdn23.img.ria.ru/images/51109/31/511093151_0:8:500:291_600x0_80_0_0_1338d8f480a8066ffbdf091c142156d3.jpg",
+    "possible_profit": 7,
+    "possible_loss": 2,
+    "price": 1044,
+    "required_factors": {
+      "risky": 40,
+      "boomer": 80
+    }
+  }
 ]

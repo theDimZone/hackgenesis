@@ -2,13 +2,13 @@
     /* The image used */
 background-image: url(image/1600694720_peterburg-bogolubov.jpg);
     /* Set a specific height */
-    height: 1200px;
+    height: auto;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
 }
 
 .parallax__layer {

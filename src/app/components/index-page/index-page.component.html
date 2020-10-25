@@ -38,7 +38,7 @@
                     </div>
                 </div>
               </div>
-          <a href="#" class="card-link" (click)="showStock()" id="More">Подробнее</a>
+          <a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showStock()" id="More">Подробнее</a>
         </div>
       </div>
     </div>
@@ -64,7 +64,7 @@
                   </div>
               </div>
             </div>
-          <a id="More" href="#" class="card-link" (click)="showBonds()" >Подробнее</a>
+          <a id="More" href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showBonds()" >Подробнее</a>
         </div>
       </div>
     </div>
@@ -92,14 +92,14 @@
                   </div>
               </div>
             </div>
-          <a href="#" class="card-link" (click)="showProducts()" id="More">Подробнее</a>
+          <a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()" id="More">Подробнее</a>
         </div>
       </div>
     </div>
   </div>
   <br>
 
-  <a href="#" class="btn btn-primary" routerLink="/test" style="background-color:  #808084; border-color:#FFFFFF ">Все еще ничего не понятно ?  пройдите тест</a>
+  <!--<a href="#" class="btn btn-primary" routerLink="/test" style="background-color:  #808084; border-color:#FFFFFF ">Все еще ничего не понятно ?  пройдите тест</a>-->
 
   </div>
 </div>
@@ -117,7 +117,7 @@
             <br>
               <p class="card-text" id="InfoText">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
 
-          <a href="#" id="More" class="card-link" (click)="showStock()">Закрыть</a>
+          <a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showStock()">Закрыть</a>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
           <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Облигации</h5>
           <p class="card-text"id="InfoText">Облигации - это долговые ценные бумаги. С их помощью эмитент - компания или государство, занимает деньги у покупателей облигаций и обязуется вернуть их с процентами.</p>
-<a href="#" id="More" class="card-link" (click)="showBonds()">Закрыть</a>
+<a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showBonds()">Закрыть</a>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
           <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Структурные продукты</h5>
           <p class="card-text"id="InfoText">Структурный продукт (производный финансовый инструмент, срочный внебиржевой контракт) — это готовая инвестиционная стратегия, комплексный финансовый инструмент с заранее определенным сроком.</p>
-<a href="#" id="More" class="card-link" (click)="showProducts()">Закрыть</a>
+<a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()">Закрыть</a>
         </div>
       </div>
     </div>

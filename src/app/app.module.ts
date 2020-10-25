@@ -20,7 +20,7 @@ const routes: Routes =[
     { path: 'about', component: AboutPageComponent},
     { path: 'helper', component: HelperPageComponent},
     { path: 'test/:name', component: TestPageComponent },
-    { path: 'test-lending', component: TestLendingComponent},
+    { path: 'about-helper', component: TestLendingComponent},
     { path: '**', component: NotfoundPageComponent }
 
 ];

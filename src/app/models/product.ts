@@ -6,6 +6,8 @@ export class Product {
   public description: string;
   public possible_profit: number; // in procent
   public possible_loss: number; // in procent
+  public price: number; // roubles for 1 piece
+
   // ?? public price: number; // roubles for 1 piece
 
   public required_factors: Factors;

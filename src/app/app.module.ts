@@ -2,6 +2,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { IndexPageComponent } from './components/index-page/index-page.component';
@@ -38,6 +39,7 @@ const routes: Routes =[
     ProductBlockComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     NgbModule

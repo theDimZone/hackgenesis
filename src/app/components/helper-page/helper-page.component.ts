@@ -33,6 +33,11 @@ export class HelperPageComponent implements OnInit {
     console.log(this.user);
   }
 
+  changeDeposit(event: any): void {
+    this.user.preferred_deposit = event.target.value;
+    this.localStorageService.setUserParameter("preferred_deposit", this.user.preferred_deposit);
+  }
+
   findBestOffers(offers: Offer[]): Offer[] {
     let best_offers: Offer[] = [];
 

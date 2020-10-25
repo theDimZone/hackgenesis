@@ -2,7 +2,7 @@ import { Factors } from './factors';
 
 export class User {
     //public number: age;
-    public preferred_deposit: number; // предпочтительная сумма вложения
+    public preferred_deposit: number = 5000; // предпочтительная сумма вложения
 
 
     public factors: Factors = new Factors();

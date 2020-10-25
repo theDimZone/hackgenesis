@@ -3,14 +3,38 @@
 <br>
 
 <div class="container container rounded mb-4 pb-3" style="background-color: #FFFFFF;" >
+  <div class="form-group">
+     <label for="formControlRange">Предпочтительный депозит: <input type="number" (keyup)="changeDeposit($event)" [value]="user.preferred_deposit"> рублей</label>
+     <input type="range" min="1000" step="1000" max="100000" (change)="changeDeposit($event)" [value]="user.preferred_deposit" class="form-control-range" id="formControlRange">
+   </div>
 
 
 
+<div class="row">
+  <div class="col sm-6">
+    <div *ngFor="let i of [0, 1, 2]">
+      <app-offer-block *ngIf="best_stocks[i]" [offer]="best_stocks[i]" [deposit]="user.preferred_deposit"></app-offer-block>
+      <br>
+    </div>
+  </div>
 
-<br>
-<div *ngFor="let i of [0, 1, 2]">
-  <app-offer-block *ngIf="best_stocks[i]" [offer]="best_stocks[i]"></app-offer-block>
-  <br>
+  <div class="col sm-6">
+    <div *ngFor="let i of [0, 1, 2]">
+      <app-offer-block *ngIf="best_bonds[i]" [offer]="best_bonds[i]" [deposit]="user.preferred_deposit"></app-offer-block>
+      <br>
+    </div>
+  </div>
 </div>
 
+<div class="row">
+  <div class="col sm-12">
+    <div *ngFor="let i of [0, 1, 2]">
+      <app-product-block *ngIf="best_products[i]" [offer]="best_products[i]" [deposit]="user.preferred_deposit"></app-product-block>
+      <br>
+    </div>
+  </div>
+</div>
+
+
+<a routerLink="/test/test1" class="btn btn-lg btn-secondary newlink">Пройти тест заново</a>
 </div>

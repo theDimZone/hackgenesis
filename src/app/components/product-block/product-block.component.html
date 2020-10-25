@@ -1,1 +1,38 @@
-<p>{{ product.name }}</p>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Подробнее "{{ product.name }}"</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+          <div *ngFor="let offer of product.offers; index as i;">
+              {{ product.offers_count[i] }}x {{ offer.name }}
+          </div>
+      </div>
+    </form>
+  </div>
+  <!--
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+  -->
+</ng-template>
+
+<div class="card bg-light border-success" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Возможный профит: {{ possible_profit }} рублей</li>
+    <li class="list-group-item">Возможная потеря: {{ possible_loss }} рублей</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" (click)="$event.stopPropagation();$event.preventDefault();open(content)" class="card-link">История</a>
+    <a href="#" class="card-link">Купить</a>
+  </div>
+</div>

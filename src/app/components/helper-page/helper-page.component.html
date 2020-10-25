@@ -4,7 +4,6 @@
 
 <div class="container rounded pl-sm-4" style="background-color: #FFFFFF; " >
   <br>
-  <h4>Рекомендации для Вас:</h4>
   <div class="row">
       <label for="formControlRange" id="InfoText">Предпочтительный депозит: <input type="number" (keyup)="changeDeposit($event)" [value]="user.preferred_deposit"> рублей</label>
       <input type="range" min="1000" step="1000" max="100000" (change)="changeDeposit($event)" [value]="user.preferred_deposit" class="form-control-range" id="formControlRange">

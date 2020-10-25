@@ -1,18 +1,17 @@
 
+<br>
+<br>
+<br>
+<br>
+<h1 style = "font-family: 'Marck Script', cursive;  text-align:  center; font-size: 6.7rem; opacity: .91;"> Здесь деньги работают <br><u>на вас</u></h1>
+<br>
 
+<br>
+<br>
+<br>
+<br>
 
 <div *ngIf="toggle1">
-  <br>
-  <br>
-  <br>
-  <br>
-  <h1 style = "font-family: 'Marck Script', cursive;  text-align:  center; font-size: 6.7rem; opacity: .91;"> Здесь деньги работают <br><u>на вас</u></h1>
-  <br>
-
-  <br>
-  <br>
-  <br>
-  <br>
   <div class="container">
     <div class="row">
       <div class="col-sm">
@@ -39,7 +38,8 @@
                     </div>
                 </div>
               </div>
-          <a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showStock()" id="More">Подробнее</a>
+          <!--<a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showStock()" id="More">Подробнее</a>-->
+          <a routerLink="/market/stocks" class="card-link" id="More">Подробнее</a>
         </div>
       </div>
     </div>
@@ -65,7 +65,8 @@
                   </div>
               </div>
             </div>
-          <a id="More" href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showBonds()" >Подробнее</a>
+          <!--<a id="More" href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showBonds()" >Подробнее</a>-->
+          <a routerLink="/market/bonds" class="card-link" id="More">Подробнее</a>
         </div>
       </div>
     </div>
@@ -93,13 +94,15 @@
                   </div>
               </div>
             </div>
-          <a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()" id="More">Подробнее</a>
+          <!--<a href="#" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()" id="More">Подробнее</a>-->
+          <a routerLink="/market/products" class="card-link" id="More">Подробнее</a>
         </div>
       </div>
     </div>
   </div>
   <br>
 
+  <!--<a href="#" class="btn btn-primary" routerLink="/test" style="background-color:  #808084; border-color:#FFFFFF ">Все еще ничего не понятно ?  пройдите тест</a>-->
 
   <!--<a href="#" class="btn btn-primary" routerLink="/test" style="background-color:  #808084; border-color:#FFFFFF ">Все еще ничего не понятно ?  пройдите тест</a>-->
   </div>
@@ -117,7 +120,10 @@
           <p class="card-text" id="InfoText">Акции – это ценные бумаги, которые обеспечивают ее владельцу долю в капитале компании.</p>
             <br>
               <p class="card-text" id="InfoText">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
-
+              <div *ngFor="let stock of stocks">
+                <app-offer-block [offer]="stock"></app-offer-block>
+                <br>
+              </div>
           <a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showStock()">Закрыть</a>
         </div>
       </div>
@@ -132,9 +138,13 @@
     <div class="col-sm">
       <div class="card" >
       <!--<img src="..." class="card-img-top" alt="...">-->
-          <div class="card-body" style=" height: 30rem;">
+          <div class="card-body" >
           <h5 class="card-title">Облигации</h5>
           <p class="card-text"id="InfoText">Облигации - это долговые ценные бумаги. С их помощью эмитент - компания или государство, занимает деньги у покупателей облигаций и обязуется вернуть их с процентами.</p>
+          <div *ngFor="let bond of bonds">
+            <app-offer-block [offer]="bond"></app-offer-block>
+            <br>
+          </div>
 <a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showBonds()">Закрыть</a>
         </div>
       </div>
@@ -152,7 +162,11 @@
           <div class="card-body" style=" height: 30rem;">
           <h5 class="card-title">Структурные продукты</h5>
           <p class="card-text"id="InfoText">Структурный продукт (производный финансовый инструмент, срочный внебиржевой контракт) — это готовая инвестиционная стратегия, комплексный финансовый инструмент с заранее определенным сроком.</p>
-<a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()">Закрыть</a>
+          <div *ngFor="let product of products">
+            <app-product-block [product]="product"></app-product-block>
+            <br>
+          </div>
+          <a href="#" id="More" class="card-link" (click)="$event.stopPropagation();$event.preventDefault();showProducts()">Закрыть</a>
         </div>
       </div>
     </div>

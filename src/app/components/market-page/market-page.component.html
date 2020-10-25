@@ -1,0 +1,33 @@
+<br>
+<div class="card text-center">
+  <div class="card-header">
+    <h4>{{ rus_name }}</h4>
+  </div>
+  <div class="card-body">
+    <div *ngIf="name === 'stocks'">
+      <p class="card-text" id="InfoText">Акции – это ценные бумаги, которые обеспечивают ее владельцу долю в капитале компании.</p>
+        <br>
+          <p class="card-text" id="InfoText">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
+          <div *ngFor="let stock of stocks">
+            <app-offer-block  [offer]="stock"></app-offer-block>
+            <br>
+          </div>
+    </div>
+
+    <div *ngIf="name === 'bonds'">
+      <p class="card-text"id="InfoText">Облигации - это долговые ценные бумаги. С их помощью эмитент - компания или государство, занимает деньги у покупателей облигаций и обязуется вернуть их с процентами.</p>
+      <div *ngFor="let bond of bonds">
+        <app-offer-block [offer]="bond"></app-offer-block>
+        <br>
+      </div>
+    </div>
+
+    <div *ngIf="name === 'products'">
+      <p class="card-text"id="InfoText">Структурный продукт (производный финансовый инструмент, срочный внебиржевой контракт) — это готовая инвестиционная стратегия, комплексный финансовый инструмент с заранее определенным сроком.</p>
+      <div *ngFor="let product of products">
+        <app-product-block [product]="product"></app-product-block>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

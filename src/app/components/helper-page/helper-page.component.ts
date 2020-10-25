@@ -63,8 +63,9 @@ export class HelperPageComponent implements OnInit {
         for(let product_factor in product.required_factors) {
           if(product.required_factors[product_factor] < this.user.factors[product_factor]) {
             best_products.push(product);
+            break;
           } else {
-            continue;
+            break;
           }
         }
     }
@@ -85,7 +86,7 @@ export class HelperPageComponent implements OnInit {
 
 
 
-    console.log(this.best_stocks);
+    console.log(this.best_products);
 
   }
 

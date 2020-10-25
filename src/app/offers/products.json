@@ -1,10 +1,7 @@
 [
   {
     "name": "Amazon",
-    "market_name": "БКС",
     "description": "Американская компания, одна из крупнейших в мире по обороту среди продающих товары и услуги через Интернет",
-    "type": "Product",
-    "logo": "...",
     "possible_profit":7,
     "possible_loss": 2,
     "price": 25000,
@@ -13,14 +10,19 @@
       "boomer":10,
       "skill": 10,
       "duration": 20
-    }
+    },
+    "offers": [
+      "Sberbank",
+      "BCS"
+    ],
+    "offers_count": [
+      100,
+      50
+    ]
   },
   {
       "name": "БАНКИ И ФИНАНСЫ",
-      "market_name": "Альфа банк",
       "description": "В основе продукта Московская Биржа, Сбербанк, TCS Group Holding PLC, Банк ВТБ",
-      "type": "Product",
-      "logo": "...",
       "possible_profit":17,
       "possible_loss": 5,
       "price": 100000,
@@ -29,14 +31,19 @@
         "boomer": 65,
         "skill": 10,
         "frequency": 75
-      }
+      },
+      "offers": [
+        "Sberbank",
+        "BCS"
+      ],
+      "offers_count": [
+        100,
+        50
+      ]
     },
     {
         "name": "Пакет Недвижимость",
-        "market_name": "Открытие",
         "description": "В основе продукта Etalon Group PLC, Группа ЛСР, Группа Компаний ПИК",
-        "type": "Product",
-        "logo": "...",
         "possible_profit":15,
         "possible_loss": 5,
         "price": 50000,
@@ -45,6 +52,14 @@
           "boomer": 70,
           "skill": 5,
           "frequency": 30
-        }
+        },
+        "offers": [
+          "Sberbank",
+          "BCS"
+        ],
+        "offers_count": [
+          100,
+          50
+        ]
       }
 ]

@@ -29,7 +29,7 @@
 <div class="row">
   <div class="col sm-12">
     <div *ngFor="let i of [0, 1, 2]">
-      <app-product-block *ngIf="best_products[i]" [offer]="best_products[i]" [deposit]="user.preferred_deposit"></app-product-block>
+      <app-product-block *ngIf="best_products[i]" [product]="best_products[i]" [deposit]="user.preferred_deposit"></app-product-block>
       <br>
     </div>
   </div>

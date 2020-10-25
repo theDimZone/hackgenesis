@@ -9,7 +9,7 @@
         <br>
           <p class="card-text" id="InfoText">Акции могут приносить своим владельцам следующие доходы: выплаты по акциям (дивиденды) и прирост курсовой стоимости (то есть рыночных цен на акции).</p>
           <div *ngFor="let stock of stocks">
-            <app-offer-block *ngFor="let stock of stocks" [offer]="stock"></app-offer-block>
+            <app-offer-block  [offer]="stock"></app-offer-block>
             <br>
           </div>
     </div>

@@ -1,15 +1,33 @@
-.parallax {
+
+   .image{
+    transition: 1s; /* Время эффекта */
+    display: block; /* Убираем небольшой отступ снизу */
+   }
+   .image:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+
+.bckcolor {
+  /*background-color: #7abfff9a;*/
+  background-size: 42%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: center; /* Строчно-блочный элемент */
+  overflow: hidden; /* Скрываем всё за контуром */
+
+}
+body {
     /* The image used */
 background-image: url(image/1600694720_peterburg-bogolubov.jpg);
     /* Set a specific height */
-    height: auto;
-
+    height: 100%;
+    background-size: cover;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position:center;
     background-repeat: no-repeat;
-    background-size:auto;
 }
+
 
 .parallax__layer {
   position: absolute;
